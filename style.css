@@ -1,0 +1,56 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px;
+}
+#left {
+    text-align: center;
+}
+table {
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+td {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #aaa;
+    background-color: white;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+}
+td.wall {
+    background-color: black;
+}
+td.start {
+    background-color: limegreen;
+}
+td.goal {
+    background-color: red;
+}
+td.visited {
+    background-color: lightskyblue;
+}
+td.path {
+    background-color: royalblue;
+    color: white;
+}
+#message {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+#instructions {
+    max-width: 320px;
+    font-size: 1em;
+    line-height: 1.6;
+}
+#controls {
+    margin: 8px 0;
+}
+.buttons button {
+    margin: 0 6px;
+}

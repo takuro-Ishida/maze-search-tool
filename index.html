@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>迷路探索 - DFS / BFS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div id="left">
+    <h1>迷路探索（DFS / BFS）</h1>
+    <p>左上がスタート（緑）、右下がゴール（赤）</p>
+    <table id="maze"></table>
+    <div id="controls">
+        <label><input type="radio" name="algo" value="DFS" checked> 深さ優先探索（DFS）</label>
+        <label><input type="radio" name="algo" value="BFS"> 幅優先探索（BFS）</label>
+    </div>
+    <div class="buttons">
+        <button onclick="startSearch()">探索スタート</button>
+        <button onclick="resetMaze()">迷路をリセット</button>
+    </div>
+    <p id="message"></p>
+</div>
+<div id="instructions">
+    <h2>遊び方 🎮</h2>
+    <ul>
+        <li>白いマス：通路</li>
+        <li>黒いマス：壁（タップで切り替え）</li>
+        <li>緑：スタート地点（左上）</li>
+        <li>赤：ゴール地点（右下）</li>
+        <li>「探索スタート」でAIが自動的に探索！（DFS / BFS 切替可）</li>
+        <li>探索順に番号が表示されるよ！</li>
+        <li><strong>迷路を作り直すときは「迷路をリセット」ボタンを使ってね！</strong></li>
+    </ul>
+</div>
+</body>
+</html>
