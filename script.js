@@ -41,8 +41,11 @@ function createMaze() {
 }
 
 function toggleWall(i, j) {
+    if (exploring) return;
+
     // Guard start (0,0) and goal (ROWS-1,COLS-1)
     if ((i === 0 && j === 0) || (i === ROWS - 1 && j === COLS - 1)) return;
+
     const cell = table.rows[i].cells[j];
     if (cell.classList.contains("wall")) {
         cell.classList.remove("wall");
