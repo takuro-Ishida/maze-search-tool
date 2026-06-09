@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>迷路探索 - 最適探索 / A*</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div id="left">
+    <h1>コスト付き迷路探索（最適探索 / A*）</h1>
+    <p>左上がスタート（緑）、右下がゴール（赤）</p>
 
+    <table id="maze"></table>
+
+    <div id="controls">
+        <div class="control-block">
+            <h3>編集モード</h3>
+            <label><input type="radio" name="editMode" value="normal" checked> 通路にする（コスト1）</label>
+            <label><input type="radio" name="editMode" value="wall"> 壁にする</label>
+            <label><input type="radio" name="editMode" value="high"> 高コストマスにする（コスト5）</label>
+        </div>
+
+        <div class="control-block">
+            <h3>探索アルゴリズム</h3>
+            <label><input type="radio" name="algo" value="ucs" checked> 最適探索</label>
+            <label><input type="radio" name="algo" value="astar"> A*</label>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="startSearch()">探索スタート</button>
+        <button onclick="clearSearchResult()">探索結果をクリア</button>
+        <button onclick="resetMaze()">迷路をリセット</button>
+    </div>
+
+    <p id="message"></p>
+</div>
+
+<div id="right">
+    <section id="instructions">
+        <h2>使い方</h2>
+        <ul>
+            <li>白：通常マス（コスト1）</li>
+            <li>黒：壁（通行不可）</li>
+            <li>紫：高コストマス（コスト5）</li>
+            <li>緑：スタート地点（左上）</li>
+            <li>赤：ゴール地点（右下）</li>
+            <li>編集モードを選んでから、マスをクリックしてください。</li>
+            <li>探索順に番号が表示されます。</li>
+            <li>最終経路は黄色で表示されます。</li>
+        </ul>
+    </section>
+
+    <section id="explanation">
+        <h2>アルゴリズムの見方</h2>
+        <p><strong>最適探索：</strong>スタートから現在地までの累積コストが小さいマスを優先します。</p>
+        <p><strong>A*：</strong>累積コストに加えて、ゴールまでの近さも考えて探索します。</p>
+        <p>A*では、ゴールまでの近さとしてマンハッタン距離を使っています。</p>
+    </section>
+
+    <section id="resultBox">
+        <h2>今回の結果</h2>
+        <div id="result"></div>
+    </section>
+
+    <section id="historyBox">
+        <h2>実行履歴</h2>
+        <button onclick="clearHistory()">履歴をクリア</button>
+        <div id="history"></div>
+    </section>
+</div>
+</body>
+</html>

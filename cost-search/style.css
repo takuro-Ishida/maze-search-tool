@@ -1,0 +1,166 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 36px;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+#left {
+    text-align: center;
+}
+
+#right {
+    width: 360px;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+section {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 14px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+h3 {
+    margin: 8px 0 4px;
+    font-size: 1em;
+}
+
+table {
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+
+td {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #aaa;
+    background-color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+td.wall {
+    background-color: black;
+    color: white;
+}
+
+td.high {
+    background-color: #b388ff;
+    color: black;
+}
+
+td.start {
+    background-color: limegreen;
+    color: black;
+}
+
+td.goal {
+    background-color: red;
+    color: white;
+}
+
+td.visited {
+    background-color: lightskyblue;
+    color: black;
+}
+
+td.path {
+    background-color: yellow;
+    color: black;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin: 10px 0;
+}
+
+.control-block {
+    text-align: left;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.control-block label {
+    display: block;
+    margin: 4px 0;
+}
+
+.buttons button {
+    margin: 4px;
+    padding: 8px 12px;
+    font-size: 0.95em;
+}
+
+#message {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#result {
+    min-height: 80px;
+}
+
+.history-item {
+    border-top: 1px solid #ddd;
+    padding: 8px 0;
+}
+
+.history-item:first-child {
+    border-top: none;
+}
+
+.result-success {
+    color: #006400;
+    font-weight: bold;
+}
+
+.result-fail {
+    color: #b00020;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #right {
+        width: 95%;
+        max-width: 620px;
+    }
+
+    td {
+        width: 48px;
+        height: 48px;
+        font-size: 14px;
+    }
+
+    #controls {
+        flex-direction: column;
+        align-items: center;
+    }
+}
