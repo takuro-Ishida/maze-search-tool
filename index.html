@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>迷路探索 - DFS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div id="left">
+    <h1>迷路探索</h1>
+    <p>左上がスタート（緑）、右下がゴール（赤）</p>
+    <div style="position: relative;">
+        <table id="maze"></table>
+        <img id="robot" src="robot.png"
+             style="position:absolute; width:40px; height:40px; display:none; z-index:10;">
+    </div>
+
+    <button id="startButton" onclick="startDFS()">探索スタート</button>
+    <button id="stopButton" onclick="stopDFS()" disabled>探索ストップ</button>
+    <button id="resetButton" onclick="resetMaze()">迷路をリセット</button>
+
+    <p id="message"></p>
+</div>
+
+<div id="instructions">
+    <h2>遊び方 🎮</h2>
+    <ul>
+        <li>白いマス：通路</li>
+        <li>黒いマス：壁（タップで切り替え）</li>
+        <li>緑：スタート地点（左上）</li>
+        <li>赤：ゴール地点（右下）</li>
+        <li>「探索スタート」でAIが自動的に探索！</li>
+        <li>探索順に番号が表示されるよ！</li>
+        <li>途中で止めたいときは「探索ストップ」を押してね！</li>
+        <li><strong>迷路を作り直すときは「迷路をリセット」ボタンを使ってね！</strong></li>
+    </ul>
+</div>
+</body>
+</html>
